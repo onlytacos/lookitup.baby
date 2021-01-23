@@ -13,8 +13,8 @@ func main() {
 		port = "8080"
 	}
 	log.Printf("HONKS ONLINE ON PORT %v", port)
-	
-	http.Handle("/kylie", http.RedirectHandler("https://twitter.com/kyliebytes/status/1335335986583142402", 302))
+
+	http.Handle("/kylie", http.RedirectHandler("https://www.businessinsider.com/author/kylie-robison", 302))
 	http.Handle("/ian", http.RedirectHandler("https://twitter.com/Dixie3Flatline/status/1334701146703679488", 302))
 	http.Handle("/pop", http.RedirectHandler("https://www.youtube.com/watch?v=EDUy3Y_w9Tk", 302))
 	http.Handle("/cloud", http.RedirectHandler("https://twitter.com/IanColdwater/status/1327350827078406144", 302))
