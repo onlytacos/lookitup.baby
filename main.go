@@ -23,6 +23,7 @@ func main() {
 	http.Handle("/defcon", http.RedirectHandler("https://twitter.com/fox0x01/status/1344775712511819778", 302))
 	http.Handle("/elle", http.RedirectHandler("https://twitter.com/ElleArmageddon/status/1349197020913827840", 302))
 	http.Handle("/acab", http.RedirectHandler("https://twitter.com/ElleArmageddon/status/1333995231063130115", 302))
+	http.Handle("/k8s-networking", http.RedirectHandler("https://www.oreilly.com/library/view/kubernetes-networking/9781492081647", 302))
 	http.Handle("/", http.RedirectHandler("https://twitter.com/IanColdwater/status/1292895288546545666", 302))
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
