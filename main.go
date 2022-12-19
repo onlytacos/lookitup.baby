@@ -27,7 +27,7 @@ func main() {
 	http.Handle("/k8s-networking", http.RedirectHandler("https://www.oreilly.com/library/view/kubernetes-networking/9781492081647", 302))
 	http.Handle("/poggers", http.RedirectHandler("https://twitter.com/Dixie3Flatline/status/1374538402989703170", 302))
 	http.Handle("/coq", http.RedirectHandler("https://twitter.com/TaliaRinger/status/1453348584758390786", 302))
-	http.HandleFunc("/hachyderm", Hachyderm)
+	http.HandleFunc("/hachyderm/", Hachyderm)
 	http.Handle("/", http.RedirectHandler("https://twitter.com/IanColdwater/status/1292895288546545666", 302))
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
@@ -40,5 +40,7 @@ func Hachyderm(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	http.Redirect(res, req, "https://hachyderm.io", http.StatusFound)
+	p := strings.Replace(req.URL.Path, "/hachyderm", "", 1)
+
+	http.Redirect(res, req, "https://hachyderm.io"+p, http.StatusFound)
 }
