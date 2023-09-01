@@ -17,7 +17,6 @@ func main() {
 
 	http.Handle("/kylie", http.RedirectHandler("https://www.businessinsider.com/author/kylie-robison", 302))
 	http.Handle("/ian", http.RedirectHandler("https://twitter.com/Dixie3Flatline/status/1334701146703679488", 302))
-	http.Handle("/pop", http.RedirectHandler("https://www.youtube.com/watch?v=EDUy3Y_w9Tk", 302))
 	http.Handle("/cloud", http.RedirectHandler("https://twitter.com/IanColdwater/status/1327350827078406144", 302))
 	http.Handle("/kubecon", http.RedirectHandler("https://www.youtube.com/watch?v=ZY4kTDCsJ44", 302))
 	http.Handle("/betty", http.RedirectHandler("https://twitter.com/BettyJunod/status/1109186194959552513", 302))
