@@ -28,7 +28,7 @@ func main() {
 	http.Handle("/coq", http.RedirectHandler("https://twitter.com/TaliaRinger/status/1453348584758390786", 302))
 	http.Handle("/grady-uml", http.RedirectHandler("https://x.com/grady_booch/status/1697450877676892455", 302))
 	http.HandleFunc("/hachyderm/", Hachyderm)
-	http.Handle("/", http.RedirectHandler("https://twitter.com/IanColdwater/status/1292895288546545666", 302))
+	http.Handle("/", http.RedirectHandler("https://web.archive.org/web/20201113211442/https://twitter.com/IanColdwater/status/1292895288546545666", 302))
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
 }
